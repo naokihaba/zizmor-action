@@ -71,6 +71,10 @@ inputs:
       You must explicitly set `advanced-security: false` to enable this option.
     required: false
     default: "false"
+  config-file:
+    description: Path to a custom zizmor configuration file.
+    required: false
+  
 
 runs:
   using: composite
@@ -90,6 +94,7 @@ runs:
         GHA_ZIZMOR_ADVANCED_SECURITY: ${{ inputs.advanced-security }}
         GHA_ZIZMOR_COLOR: ${{ inputs.color }}
         GHA_ZIZMOR_ANNOTATIONS: ${{ inputs.annotations }}
+        GHA_ZIZMOR_CONFIG_FILE: ${{ inputs.config-file }}
       shell: bash
 
     - name: Upload SARIF file to GitHub Advanced Security
