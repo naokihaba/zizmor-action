@@ -60,6 +60,10 @@ fi
 [[ -n "${GHA_ZIZMOR_MIN_CONFIDENCE}" ]] && arguments+=("--min-confidence=${GHA_ZIZMOR_MIN_CONFIDENCE}")
 [[ "${GHA_ZIZMOR_COLOR}" == "true" ]] && arguments+=("--color=always") || arguments+=("--color=never")
 
+if [[ -n "${GHA_ZIZMOR_CONFIG_FILE:-}" ]]; then
+    arguments+=("--config-file=${GHA_ZIZMOR_CONFIG_FILE}")
+fi
+
 image="ghcr.io/zizmorcore/zizmor:${GHA_ZIZMOR_VERSION#v}"
 
 # Notes:
