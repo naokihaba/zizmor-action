@@ -19,6 +19,7 @@ Run [`zizmor`] from GitHub Actions!
   - [`token`](#token)
   - [`advanced-security`](#advanced-security)
   - [`annotations`](#annotations)
+  - [`color`](#color)
   - [`config`](#config)
 - [Permissions](#permissions)
 - [Troubleshooting](#troubleshooting)
