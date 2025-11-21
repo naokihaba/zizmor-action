@@ -61,7 +61,7 @@ fi
 [[ "${GHA_ZIZMOR_COLOR}" == "true" ]] && arguments+=("--color=always") || arguments+=("--color=never")
 
 if [[ -n "${GHA_ZIZMOR_CONFIG:-}" ]]; then
-    arguments+=("config=${GHA_ZIZMOR_CONFIG}")
+    arguments+=("--config=${GHA_ZIZMOR_CONFIG}")
 fi
 
 image="ghcr.io/zizmorcore/zizmor:${GHA_ZIZMOR_VERSION#v}"
